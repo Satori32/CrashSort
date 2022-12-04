@@ -17,12 +17,29 @@ bool CrashSort(It B, It E, R r) {
 
 	return true;
 }
+template<class It,class R, class L>
+bool CrashSort(It B, It E, R r,L l) {
+	std::shuffle(B, E, r);
+	std::shuffle(B, E, r);
+	std::shuffle(B, E, r);
+	std::sort(B, E, l);
+
+	return true;
+}
 template<class It,class R>
 bool StableCrashSort(It B, It E, R r) {
 	std::shuffle(B, E, r);
 	std::shuffle(B, E, r);
 	std::shuffle(B, E, r);
 	std::stable_sort(B, E);
+
+	return true;
+}template<class It,class R,class L>
+bool StableCrashSort(It B, It E, R r,L l) {
+	std::shuffle(B, E, r);
+	std::shuffle(B, E, r);
+	std::shuffle(B, E, r);
+	std::stable_sort(B, E,l);
 
 	return true;
 }
